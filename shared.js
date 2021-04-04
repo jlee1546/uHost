@@ -17,18 +17,26 @@ for (var i = 0 ; i < selectPlanButtons.length; i++) {
 }
 
 backdrop.addEventListener('click', function() {
+    mobileNav.classList.remove('open')
     mobileNav.style.display = 'none';
     closeModal();
 });
 
-modalNoButton.addEventListener('click',closeModal);
+if (modalNoButton) {
+    modalNoButton.addEventListener('click',closeModal);
+}
 
 function closeModal() {
-    backdrop.style.display = 'none';
-    modal.style.display = 'none';
+    backdrop.classList.remove('open');
+    if (modal) {
+    modal.classList.remove('open');
+    };
+    
 }
 
 toggleButton.addEventListener('click', function() {
-    mobileNav.style.display = 'block';
-    backdrop.style.display = 'block';
-});
+    mobileNav.classList.add('open');
+    backdrop.classList.add('open');
+    
+    
+})
