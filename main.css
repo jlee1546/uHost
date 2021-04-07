@@ -131,16 +131,29 @@ body {
 }
 .key-feature__list {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    
+}
 
+
+
+
+@media(min-width: 40rem) {
+    .key-feature {
+        display: inline-block;
+        width: 30%;
+        max-width: 25rem;
+        vertical-align: top;
+    }
+
+    .key-feature__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+    }
 }
-.key-feature {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-}
+
 .key-feature__image {
     background: #ffcede;
     width: 8rem;
