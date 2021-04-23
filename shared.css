@@ -80,16 +80,14 @@ main {
 }
 .main-nav {
     display: none;
-    width: calc(100% - 48px);
-    text-align: right;
-    vertical-align: middle;
+    
     
     
 }
 
 @media(min-width: 40rem) {
     .main-nav {
-        
+        display: flex;
     }
 
     .toggle-button {
@@ -148,16 +146,26 @@ main {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .main-footer__link {
-    display: block;
-    margin: 1rem 0;
+    
+    margin: 0.5rem 0;
 }
 
 @media (min-width: 40rem) {
-    .main-footer__link {
+    .main-footer__links {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
 
+        
+    }
+    
+    .main-footer__link {
+        margin: 0 1rem;
     }
 }
 .main-footer__link a {
@@ -213,9 +221,14 @@ main {
     width: 90%;
     height: 100%;
     list-style: none;
-    margin: 10% auto;
+    margin: 0 auto;
     padding: 0;
-    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .mobile-nav__item {
